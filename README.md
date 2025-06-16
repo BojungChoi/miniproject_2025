@@ -1,2 +1,2 @@
-# miniproject_2025
-IoT 미니프로젝트2025
+# miniproject-2025
+Iot 미니프로젝트 2025
