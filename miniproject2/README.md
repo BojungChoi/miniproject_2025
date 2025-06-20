@@ -107,12 +107,18 @@ https://github.com/user-attachments/assets/2d82c7ad-111f-4be4-9869-ec82081b1da8
 - 기본적인 DB관리 앱 + 실시간 공정 모니터링 + 리포트 시각화
 
 1. CommunityToolkit.Mvvm, MahApps.Metro 초기 설정
-
+2. MainView.xaml UI 디자인
+3. SettingView.xaml 생성
+4. Helpers.Common 클래스 정적 인스턴스 변수 작성
+5. SettingView 화면 UI 구현
+6. SetttngViewModel과 연동 작업
+7. Model DB 테이블 클래스 가져오기
 
 #### 파이썬 AI + ASP.NET 연동
 - 참조소스
-- iot-webapp-2025/ref/ReferencedSolution/ConvertWebApp 
-- hungout-with-springboot/003_aicombo/
+  - iot-webapp-2025/ref/ReferencedSolution/ConvertWebApp
+  - hangout-with-springboot/003_aicombo/
+
 
 
 ### 파이널프로젝트 관련
