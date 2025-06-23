@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using MahApps.Metro.Controls.Dialogs;
 using System.Windows;
 using System.Windows.Controls;
+using WpfMrpSimulatorApp.Helpers;
 using WpfMrpSimulatorApp.Views;
 
 namespace WpfMrpSimulatorApp.ViewModels
@@ -17,7 +18,7 @@ namespace WpfMrpSimulatorApp.ViewModels
 
         public MainViewModel(IDialogCoordinator coordinator)
         {
-            this.dialogCoordinator = coordinator;   // 다이얼로그 코디네이터 초기화
+            this.dialogCoordinator = coordinator; // 다이얼로그 코디네이터 초기화
 
             Greeting = "MRP 공정관리!";
         }
@@ -37,13 +38,12 @@ namespace WpfMrpSimulatorApp.ViewModels
         [RelayCommand]
         public async Task AppExit()
         {
-            // var result = MessageBox.Show("종료하시겠습니까?", "종료확인", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            //var result = MessageBox.Show("종료하시겠습니까?", "종료확인", MessageBoxButton.YesNo, MessageBoxImage.Question);
             var result = await this.dialogCoordinator.ShowMessageAsync(this, "종료확인", "종료하시겠습니까?", MessageDialogStyle.AffirmativeAndNegative);
-            if (result == MessageDialogResult.Affirmative)
+            if (result == MessageDialogResult.Affirmative) 
             {
                 Application.Current.Shutdown();
-            }
-            else
+            } else
             {
                 return;
             }
@@ -52,8 +52,20 @@ namespace WpfMrpSimulatorApp.ViewModels
         [RelayCommand]
         public void AppSetting()
         {
-            var viewModel = new SettingViewModel();
+            var viewModel = new SettingViewModel(Common.DIALOGCOORDINATOR);
             var view = new SettingView
+            {
+                DataContext = viewModel,
+            };
+
+            CurrentView = view;
+        }
+
+        [RelayCommand]
+        public void SetSchedule()
+        {
+            var viewModel = new ScheduleViewModel(Common.DIALOGCOORDINATOR);
+            var view = new ScheduleView
             {
                 DataContext = viewModel,
             };
