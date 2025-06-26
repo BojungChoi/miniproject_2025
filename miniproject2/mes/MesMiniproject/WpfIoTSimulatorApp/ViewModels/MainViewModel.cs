@@ -39,7 +39,7 @@ namespace WpfIoTSimulatorApp.ViewModels
             LogText = "시뮬레이터를 시작합니다...";
 
             // MQTT용 초기화
-            brokerHost = "210.119.12.57"; // MQTT 브로커 호스트 주소
+            brokerHost = "localhost"; // MQTT 브로커 호스트 주소
             clientId = "IOT01"; // IoT장비번호
             mqttTopic = "pknu/sf57/data"; // 스마트팩토리 토픽
             logNum = 1; // 로그 메시지 순번 초기화
