@@ -171,7 +171,7 @@ namespace WpfMqttSubApp.ViewModels
                 
             }
             catch (Exception ex)
-            {
+           {
                 LogText += $"{DatabaseHost} DB서버 접속실패 : {ex.Message}\n";
             }
         }
