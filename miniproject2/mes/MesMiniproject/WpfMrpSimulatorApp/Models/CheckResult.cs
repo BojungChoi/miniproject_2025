@@ -1,4 +1,4 @@
-﻿namespace WpfMqttSubApp.Models
+﻿namespace WpfMrpSimulatorApp.Models
 {
     // JSON 전송용 객체
     public class CheckResult

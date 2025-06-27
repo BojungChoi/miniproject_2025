@@ -31,8 +31,8 @@
 
             <!-- Button 영역 -->
             <StackPanel Grid.Row="0" Orientation="Horizontal">
-                <Button Content="Move" Command="{Binding MoveCommand}"/>
-                <Button Content="센서 체크" Command="{Binding CheckCommand}" />
+                <Button Content="Move" Command="{Binding MoveCommand}" />
+                <Button Content="Check" Command="{Binding CheckCommand}" />
             </StackPanel>
 
             <!-- HMI(Human Machine Interface) Like -->

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WpfMqttSubApp.Models
+﻿namespace WpfMqttSubApp.Models
 {
     public class TotalConfig
     {
@@ -16,8 +10,7 @@ namespace WpfMqttSubApp.Models
     {
         public string Broker { get; set; }
         public string ClientId { get; set; }
-
-        public short Port { get; set; }
+        public int Port { get; set; }
         public string Topic { get; set; }
     }
 
@@ -25,8 +18,7 @@ namespace WpfMqttSubApp.Models
     {
         public string Server { get; set; }
         public string Database { get; set; }
-        public string UserId { get; set; }
+        public string UserId {  get; set; }
         public string Password { get; set; }
-
     }
 }
