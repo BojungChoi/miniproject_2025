@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WpfIoTSimulatorApp.Models
+﻿namespace WpfIoTSimulatorApp.Models
 {
+    // json용 클래스. 딴데 안써요.
     public class PrcMsg
     {
-        public string ClentId { get; set; }
+        public string ClientId { get; set; }
         public string PlantCode { get; set; }
         public string FacilityId { get; set; }
+        public string Timestamp { get; set; }
         public string Flag { get; set; }
     }
 }
